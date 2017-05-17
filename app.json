@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/aid/aid"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f96060",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#f96060",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "images/information_normal.png",
+        "selectedIconPath": "images/information_checked.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/aid/aid",
+        "iconPath": "images/home_normal.png",
+        "selectedIconPath": "images/home_checked.png",
+        "text": "急救"
+      }
+    ]
+  }
+}

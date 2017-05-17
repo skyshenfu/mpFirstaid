@@ -1,0 +1,11 @@
+<template name="newsList">
+  <block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
+    <view class="newstype-item">
+      <text>{{item}}</text>
+    </view>
+  </block>
+  <view class="weui-loadmore">
+    <view class="weui-loading" hidden="{{bottomInVisiable}}"></view>
+    <view class="weui-loadmore__tips" hidden="{{bottomInVisiable}}">正在加载</view>
+  </view>
+</template>
