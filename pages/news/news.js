@@ -15,7 +15,8 @@ Page({
     tabs: [" 项一", " 项二", " 项三"," 项四"],
     activeIndex: 0,
     sliderOffset: 0,
-    sliderLeft: 0
+    sliderLeft: 0,
+    locked: false
   },
   onLoad:function(){
     var that = this;
@@ -30,17 +31,24 @@ Page({
     });
   },
   judgebyindex:function(){
+    if (this.data.locked == true){
+      return ;
+    }else{
+      this.data.locked = true
+    }
     switch (this.data.activeIndex) {
       case 0:
         var that = this;
         setTimeout(function () {
           if (that.data.list0.items[0] == 1) {
             that.setData({
-              list0: Object.assign({},that.data.list0,{"items":[11,2,3,4,5,6]})
+              list0: Object.assign({},that.data.list0,{"items":[11,2,3,4,5,6]}),
+              locked:false
             })
           } else {
             that.setData({
-              list0: Object.assign({}, that.data.list0, { "items": [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] })
+              list0: Object.assign({}, that.data.list0, { "items": [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] }),
+              locked: false
             })
           }
           wx.stopPullDownRefresh()
@@ -58,10 +66,12 @@ Page({
     }
   },
   tabClick: function (e) {
-    this.setData({
-      sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
-    });
+    if(!this.data.locked){
+      this.setData({
+        sliderOffset: e.currentTarget.offsetLeft,
+        activeIndex: e.currentTarget.id
+      });
+    }
   }
   ,
   onPullDownRefresh: function () {
@@ -71,7 +81,11 @@ Page({
     console.log("滑动了...")
   },
   onReachBottom: function () {
-    console.log(this.data.items0)
+    if (!this.data.locked){
+      this.data.locked = true
+    }else{
+      return;
+    }
     var that = this;
     console.log("加载")
     wx.showLoading({
@@ -80,7 +94,7 @@ Page({
     this.setData({
       list0: Object.assign({},that.data.list0,{
         bottomInVisiable:false
-      })
+      }),
     })
     setTimeout(function () {
       that.data.list0.items.push("new");
@@ -91,7 +105,8 @@ Page({
       that.setData({
         list0: Object.assign({}, that.data.list0, {
           bottomInVisiable: true
-        })
+        }),
+        locked:false
       })
       wx.hideLoading();
     }, 2000)
