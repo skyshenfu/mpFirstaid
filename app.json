@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/news/news",
-    "pages/aid/aid"
+    "pages/aid/aid",
+    "pages/news/news"        
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,21 +10,21 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#333333",
+    "color": "#666",
     "selectedColor": "#f96060",
     "position": "bottom",
     "list": [
+            {
+              "pagePath": "pages/aid/aid",
+              "iconPath": "images/icon_firstaid_normal.png",
+              "selectedIconPath": "images/icon_firstaid_highlight.png",
+              "text": "急救"
+            },
       {
         "pagePath": "pages/news/news",
-        "iconPath": "images/information_normal.png",
-        "selectedIconPath": "images/information_checked.png",
+        "iconPath": "images/icon_information_normal.png",
+        "selectedIconPath": "images/icon_information_highlight.png",
         "text": "资讯"
-      },
-      {
-        "pagePath": "pages/aid/aid",
-        "iconPath": "images/home_normal.png",
-        "selectedIconPath": "images/home_checked.png",
-        "text": "急救"
       }
     ]
   }
