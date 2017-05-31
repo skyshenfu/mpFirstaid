@@ -1,5 +1,3 @@
-var sliderWidth = 110; // 需要设置slider的宽度，用于计算中间位置
-
 Page({
     data: {
         aidtypes:[]
@@ -39,5 +37,10 @@ Page({
              }
            ]
        })
+    },
+    itemclick:function(event){
+      wx.navigateTo({
+        url: '/pages/aiddetail/aiddetail?aidid='+ event.currentTarget.dataset.num
+      })
     }
 });

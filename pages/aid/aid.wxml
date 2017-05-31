@@ -1,6 +1,6 @@
 <view class="aidwhole">
 <block wx:for="{{aidtypes}}" wx:for-item="type" wx:key="*this">
-<view class="aidtype">
+<view class="aidtype" bindtap="itemclick" data-num="{{type.typesrc}}">
   <image src="{{type.typesrc}}" style="width: 140rpx; height: 140rpx;"></image>
   <text class="aidtypetext">{{type.typetext}}</text>
   </view>
