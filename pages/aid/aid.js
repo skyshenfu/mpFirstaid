@@ -3,40 +3,16 @@ Page({
         aidtypes:[]
     },
     onLoad: function () {
-       this.setData({
-         aidtypes:[
-             {
-               "typesrc":"/images/icon_information_highlight.png",
-               "typetext":"name1"
-             },
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name2"
-             },
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name3"
-             },
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name4"
-             }
-             ,
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name5"
-             }
-             ,
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name6"
-             },
-             {
-               "typesrc": "/images/icon_information_highlight.png",
-               "typetext": "name7"
-             }
-           ]
-       })
+      var that=this
+      wx.request({
+        url: 'https://wx.all-help.com/mobile/knowledgeListWX.json',
+        method:'POST',
+        success: function (res) {
+           console.log(res)
+           that.setData({ aidtypes: res.data.data.dataList}) 
+        }
+      },
+      )
     },
     itemclick:function(event){
       wx.navigateTo({

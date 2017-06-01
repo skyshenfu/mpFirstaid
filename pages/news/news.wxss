@@ -17,8 +17,17 @@ page,
 .newstype-item {
   display: flex;
   flex-direction: row;
-  margin: 10rpx;
+  margin-top: 2rpx;
+  background: #00ff00;
+  width: 750rpx;
+  height: 220rpx;
   justify-content: flex-start;
+}
+.newstype-img{
+
+}
+.newstype-text{
+  
 }
 .animationgLoading{
     display: flex;

@@ -3,7 +3,7 @@
   flex: 1;
   height: 100%;
   width: 750rpx;
-  background: #00ff00;
+  background: #ffffff;
   flex-direction: row;
   flex-wrap: wrap;
   padding-left: 3rpx;
@@ -13,13 +13,15 @@
   display: flex;
   width: 186rpx;
   height: 186rpx;
-  background: #0000ff;
+  background: #ffffff;
   flex-direction:column;
   justify-content: center;
   align-items: center;
 }
 .aidtypetext{
- color: #ffffff
+ color: #000000;
+ margin-top: 10rpx;
+ font-size: 20rpx
 }
 .aidtypeimg{
   display: flex;
