@@ -1,4 +1,4 @@
-<import src="listtemplate.wxml"/>
+<import src="listtemplate.wxml" />
 <view class="page">
   <view>
     <view class="weui-tab">
@@ -12,13 +12,16 @@
       </view>
       <view class="weui-tab__panel">
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-        <template is="newsList" data="{{...list0}}"></template>
+          <template is="newsList" data="{{...list0}}"></template>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-            <template is="newsList" data="{{items1}}"></template>
+          <template is="newsList" data="{{...list1}}"></template>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-            <template is="newsList" data="{{items2}}"></template>
+          <template is="newsList" data="{{...list2}}"></template>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <template is="newsList" data="{{...list3}}"></template>
         </view>
       </view>
     </view>

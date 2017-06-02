@@ -7,12 +7,11 @@ page,
     padding-bottom: 0;
 }
 .weui-tab__content{
-    text-align: center;
+    text-align:left;
 }
 .newstype-list {
   display: flex;
   flex-direction: column;
-  background: 'blue'
 }
 .newstype-item {
   display: flex;
@@ -20,14 +19,38 @@ page,
   margin-top: 2rpx;
   background: #00ff00;
   width: 750rpx;
-  height: 220rpx;
+  height: 250rpx;
   justify-content: flex-start;
 }
-.newstype-img{
-
+.newstype-item-right{
+  margin-top:17rpx; 
+  display: flex;
+  flex-direction: column;
+  margin-left:30rpx; 
+  width: 392rpx;
+  height: 216rpx;
+  justify-content: space-between;
+  background: #ff00ff;
 }
-.newstype-text{
-  
+.newstype-item-maintext{
+  font-size: 30rpx;
+}
+.newstype-item-botoom{
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.newstype-item-botoom-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.newstype-item-smalltext{
+  display: flex;
+  color: #999;
+  font-size: 25rpx
 }
 .animationgLoading{
     display: flex;

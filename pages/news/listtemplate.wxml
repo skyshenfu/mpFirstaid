@@ -1,7 +1,17 @@
 <template name="newsList">
   <block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
     <view class="newstype-item">
-      <text>{{item}}</text>
+      <image src="{{item.pic}}" style="width:288rpx;height:216rpx; margin-left:20rpx;margin-top:17rpx" mode="aspectFill"></image>
+      <view class="newstype-item-right">
+            <text class="newstype-item-maintext">{{item.title}}</text>
+            <view class="newstype-item-botoom">
+                <text class="newstype-item-smalltext">{{item.createtimestr}}</text>
+                <view class="newstype-item-botoom-right">
+                  <image src="/images/icon_look.png" style="width:34rpx;height:34rpx"></image>
+                  <text class="newstype-item-smalltext" style="margin-left:10rpx">{{item.clickcount}}</text>
+                </view>
+            </view>
+      </view>
     </view>
   </block>
   <view class="weui-loadmore">
