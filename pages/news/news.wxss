@@ -17,10 +17,10 @@ page,
   display: flex;
   flex-direction: row;
   margin-top: 2rpx;
-  background: #00ff00;
   width: 750rpx;
   height: 250rpx;
   justify-content: flex-start;
+  border-bottom:2rpx solid #999999;
 }
 .newstype-item-right{
   margin-top:17rpx; 
@@ -30,7 +30,6 @@ page,
   width: 392rpx;
   height: 216rpx;
   justify-content: space-between;
-  background: #ff00ff;
 }
 .newstype-item-maintext{
   font-size: 30rpx;

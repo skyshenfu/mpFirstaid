@@ -8,7 +8,7 @@
                 <text class="newstype-item-smalltext">{{item.createtimestr}}</text>
                 <view class="newstype-item-botoom-right">
                   <image src="/images/icon_look.png" style="width:34rpx;height:34rpx"></image>
-                  <text class="newstype-item-smalltext" style="margin-left:10rpx">{{item.clickcount}}</text>
+                  <text class="newstype-item-smalltext" style="margin-left:10rpx;  font-size: 20rpx; margin-bottom:1rpx">{{item.clickcount}}</text>
                 </view>
             </view>
       </view>

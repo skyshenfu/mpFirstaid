@@ -924,7 +924,7 @@ icon {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
-  padding: 13px 0;
+  padding: 10px 0;
   text-align: center;
   font-size: 0;
 }
@@ -936,7 +936,7 @@ icon {
   content: " ";
   left: 0;
   bottom: 0;
-  width: 6em;
+  width: 25%;
   height: 3px;
   background-color: #f96060;
   -webkit-transition: -webkit-transform .3s;
@@ -961,7 +961,7 @@ icon {
 .weui-tab__panel {
   box-sizing: border-box;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 45px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
