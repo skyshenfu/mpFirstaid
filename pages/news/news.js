@@ -30,6 +30,14 @@ Page({
     }
   }
   ,
+  itemclick: function (event){
+    console.log(event.currentTarget)
+    wx.navigateTo({
+      url: '/pages/newsdetail/newsdetail?aid=' + event.currentTarget.dataset.aid 
+      + '&title=' + event.currentTarget.dataset.title + '&time='+event.currentTarget.dataset.time
+    })
+  }
+  ,
   netRequest: function (classid, goallist,isMore) {
     var that = this
     var classandpagejson={}

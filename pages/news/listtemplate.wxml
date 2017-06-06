@@ -1,6 +1,6 @@
 <template name="newsList">
-  <block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
-    <view class="newstype-item">
+  <block wx:for="{{items}}" wx:for-item="item" wx:key="{{items.aid}}">
+    <view class="newstype-item" bindtap="itemclick" data-aid="{{item.aid}}" data-title="{{item.title}}" data-time="{{item.createtimestr}}">
       <image src="{{item.pic}}" style="width:288rpx;height:216rpx; margin-left:20rpx;margin-top:17rpx" mode="aspectFill"></image>
       <view class="newstype-item-right">
             <text class="newstype-item-maintext">{{item.title}}</text>

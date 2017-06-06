@@ -1,2 +1,10 @@
-
+.aidwhole{
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 750rpx;
+  background: #ffffff;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 

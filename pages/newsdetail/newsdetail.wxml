@@ -1,0 +1,12 @@
+<!--pages/newsdetail/newsdetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="articletitle">
+<text style="font-size:36rpx">{{title}}</text>
+</view>
+<view class="articlesecond">
+<text style="font-size:25rpx;color:#777">123</text>
+<text style="margin-left:30rpx;font-size:25rpx;color:#777">{{time}}</text>
+</view>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

@@ -2,7 +2,8 @@
   "pages": [
     "pages/aid/aid",
     "pages/news/news",
-    "pages/aiddetail/aiddetail" 
+    "pages/aiddetail/aiddetail", 
+    "pages/newsdetail/newsdetail"        
   ],
   "window": {
     "backgroundTextStyle": "light",
