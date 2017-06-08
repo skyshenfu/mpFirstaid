@@ -10,6 +10,10 @@ Page({
         success: function (res) {
            console.log(res)
            that.setData({ aidtypes: res.data.data.dataList}) 
+        },
+        fail:function(res){
+          console.log(res)
+          console.log('------------------')
         }
       },
       )

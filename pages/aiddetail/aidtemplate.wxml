@@ -1,0 +1,19 @@
+<import src="aidtemplate.wxml" />
+<template name="aidTemplate">
+<view class="aidscence">
+    <text style="margin-top:20rpx">{{name}}</text>
+<view class="aidsteps">
+  <block wx:for="{{steps}}" wx:for-item="step" wx:key="{{step.id}}">
+    <view class="aidstep">
+      <text class="aidstepimg">{{step.id}}</text>
+      <view class="aidsteptext">
+      <text style="font-size:28rpx;">{{step.pageDesc}}</text>
+      <text style="color:#aaa;font-size:25rpx;">{{step.extendedDesc}}</text>
+      </view>
+    </view>
+    <view wx:if="{{steps.length!=step.id}}" style="width:100%;background:#999;height:2rpx"></view>
+  </block>
+  <template is="aidTemplate" data="{{...scenceitem}}"></template>
+</view>
+  </view>
+</template>

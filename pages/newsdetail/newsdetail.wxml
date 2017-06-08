@@ -10,3 +10,6 @@
 <view class="wxParse">
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 </view>
+<view style="text-align:center">
+<text style="font-size:23rpx;color:#999;">说明:部分图片及文字信息均来自网络，如侵犯到您的权益，请及时通知我们，我们会及时删除</text>
+</view>

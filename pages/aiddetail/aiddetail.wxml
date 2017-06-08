@@ -1,4 +1,12 @@
+<import src="aidtemplate.wxml" />
 <view class="aidwhole">
-<video src="https://wx.all-help.com/static/html/video/yishibuqing_2.mp4" duration="53"></video>
-<view class=""></view>
+  <view wx:if="{{video!=''}}">
+    <video src="{{video}}" duration="60"></video>
+  </view>
+  <view wx:elif="{{video==''&&img!=''}}">
+    <image src="{{img}}"></image>
+  </view>
+  <block wx:for="{{scenes}}"  wx:for-item="scenceitem" wx:key="*this">
+    <template is="aidTemplate" data="{{...scenceitem}}"></template>
+  </block>
 </view>

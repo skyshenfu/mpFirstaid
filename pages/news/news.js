@@ -3,7 +3,7 @@ var listTemplate = {
   "totalpage": 0,
   "currentpage": 0,
   "items": [],
-  "bottomInVisiable": true
+  "bottomInVisiable": true,
 };
 Page({
   data: {

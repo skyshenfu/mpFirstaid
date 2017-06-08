@@ -18,7 +18,7 @@ page,
   flex-direction: row;
   margin-top: 2rpx;
   width: 750rpx;
-  height: 250rpx;
+  height: 230rpx;
   justify-content: flex-start;
   border-bottom:2rpx solid #999999;
 }
@@ -28,7 +28,7 @@ page,
   flex-direction: column;
   margin-left:30rpx; 
   width: 392rpx;
-  height: 216rpx;
+  height: 196rpx;
   justify-content: space-between;
 }
 .newstype-item-maintext{

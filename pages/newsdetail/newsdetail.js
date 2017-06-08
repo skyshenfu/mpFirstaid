@@ -18,7 +18,6 @@ Page({
   //  article = article.replace(/<script.*?>[\s\S]*?<\/script>/ig, "")
     article = article.match(/<div class=\"text\">[\s\S]*?<div class="copyright-tip">/ig)[0]
     console.log("--------------------------------")
-    console.log(article)
     WxParse.wxParse('article', 'html', article, this, 5)
   }
   ,
@@ -38,7 +37,6 @@ Page({
       method: 'GET',
       success: function (res) {
         article=res.data
-        console.log(options)
         that.onHtmlParse()
       }
     })

@@ -1,10 +1,45 @@
-.aidwhole{
+.aidwhole {
   display: flex;
   flex: 1;
+  align-items: center;
   height: 100%;
   width: 750rpx;
-  background: #ffffff;
-  flex-direction: row;
-  flex-wrap: wrap;
+  background: #fff;
+  flex-direction: column;
 }
 
+.aidscence {
+  display: flex;
+  flex-direction: column;
+  width: 640rpx;
+}
+.aidsteps{
+    border: 2rpx solid #999999;
+    border-radius:20rpx 
+}
+.aidstep {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top:20rpx; 
+  padding-bottom:20rpx; 
+}
+.aidstepimg{
+  display: flex;
+  background: #f96060;
+  width: 40rpx;
+  color: #fff;
+  margin-top:4rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:30rpx; 
+  height:40rpx;
+  border-radius: 50%;
+}
+.aidsteptext{
+  display: flex;
+  width: 540rpx; 
+  flex-direction: column
+}
