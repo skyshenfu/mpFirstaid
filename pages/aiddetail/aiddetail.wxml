@@ -6,7 +6,28 @@
   <view wx:elif="{{video==''&&img!=''}}">
     <image src="{{img}}"></image>
   </view>
-  <block wx:for="{{scenes}}"  wx:for-item="scenceitem" wx:key="*this">
-    <template is="aidTemplate" data="{{...scenceitem}}"></template>
-  </block>
+  <view wx:if="{{scenes.length==0}}">
+    <block wx:for="{{scenes}}" wx:for-item="scenceitem" wx:key="*this">
+      <template is="aidTemplate" data="{{...scenceitem}}"></template>
+    </block>
+  </view>
+  <view wx:if="{{scenes.length!=0}}">
+    <block wx:for="{{scenes}}" wx:for-item="scenceitem" wx:key="*this">
+      <template is="aidTemplate" data="{{...scenceitem}}"></template>
+    </block>
+  </view>
+  <view wx:if="{{subfolders.length!=0}}" style="margin-top:20rpx">
+    <text>常见问题:</text>
+    <block wx:for="{{subfolders[0].data}}" wx:for-item="qaitem" wx:key="*this">
+      <view class="aidqa">
+        <view id="{{qaitem.id}}" class="weui-flex__item" bindtap="toggle" style="margin-top:15rpx;">
+          <view class="aidqasmall">
+            <text class="aidstepimg" style="padding:0rpx;margin-top:0rpx">{{switchs[qaitem.id-1] ? '-':'+'}}</text>
+            <text style="font-size:28rpx;margin-left:20rpx;margin-top:2rpx;">{{qaitem.question}}</text>
+          </view>
+          <view class="kind-list__item-bd {{switchs[qaitem.id-1] ? 'kind-list__item-bd_show' : ''}}" style="font-size:25rpx;color:#999;margin-left:60rpx;">{{qaitem.answer}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>
