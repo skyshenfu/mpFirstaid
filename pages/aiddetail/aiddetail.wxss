@@ -39,6 +39,19 @@
   padding: 5rpx;
   border-radius: 50%;
 }
+.aidsqaimg{
+  display: flex;
+  background: #f96060;
+  width: 40rpx;
+  height:40rpx;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:30rpx; 
+  padding: 5rpx;
+  border-radius: 50%;
+}
 .aidsteptext{
   display: flex;
   width: 540rpx; 
@@ -48,7 +61,12 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center
+  align-items: flex-start;
+}
+.aidqatext{
+    display: flex;
+    margin-left:20rpx;
+    width: 640rpx
 }
 .aidqa{
   display: flex;

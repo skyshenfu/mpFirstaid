@@ -10,7 +10,7 @@ Page({
   data: {
     title:"",
     time:"",
-    author:""
+    source:""
   },
   onHtmlParse:function(){
 
@@ -29,7 +29,8 @@ Page({
     var that=this
     that.setData({
       title: options.title,
-      time:options.time
+      time:options.time,
+      source: options.source != "" ? options.source:"网络"
     })
   
     wx.request({

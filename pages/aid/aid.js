@@ -21,7 +21,7 @@ Page({
     itemclick:function(event){
       console.log(event.currentTarget)
       wx.navigateTo({
-        url: '/pages/aiddetail/aiddetail?aidid='+ event.currentTarget.dataset.num
+        url: '/pages/aiddetail/aiddetail?aidurl=' + event.currentTarget.dataset.aidurl
       })
     }
 });

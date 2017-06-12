@@ -1,6 +1,7 @@
 <template name="newsList">
   <block wx:for="{{items}}" wx:for-item="item" wx:key="{{items.aid}}">
-    <view class="newstype-item" bindtap="itemclick" data-aid="{{item.aid}}" data-title="{{item.title}}" data-time="{{item.createtimestr}}">
+    <view class="newstype-item" bindtap="itemclick" data-aid="{{item.aid}}" 
+    data-title="{{item.title}}" data-time="{{item.createtimestr}}" data-source="{{item.source}}">
       <image src="{{item.pic}}" style="width:288rpx;height:196rpx; margin-left:20rpx;margin-top:17rpx" mode="aspectFill"></image>
       <view class="newstype-item-right">
             <text class="newstype-item-maintext">{{item.title}}</text>
