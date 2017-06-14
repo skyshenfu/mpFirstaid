@@ -28,6 +28,18 @@ Page({
       case 3:
         return this.data.list3;
     }
+  },
+  switchByEIndex(number){
+    switch (parseInt(number)) {
+      case 0:
+        return this.data.list0;
+      case 1:
+        return this.data.list1;
+      case 2:
+        return this.data.list2;
+      case 3:
+        return this.data.list3;
+    }
   }
   ,
   itemclick: function (event){
@@ -117,17 +129,26 @@ Page({
     }
   },
   tabClick: function (e) {
+    console.log(e)
     if (!this.data.locked) {
-      this.setData({
+      var name = "list" + (e.currentTarget.id).toString()
+      var datajson={}
+      var temp = Object.assign({},this.switchByEIndex(e.currentTarget.id))
+      datajson[name] = {}
+      this.setData(Object.assign({}, {
         sliderOffset: e.currentTarget.offsetLeft,
         activeIndex: e.currentTarget.id
-      });
+      },datajson))
+      datajson[name] = temp
+      this.setData(datajson)
     }
   }
   ,
   onPullDownRefresh: function () {
-  
-    this.refreshbyindex(this.switchListByIndex(),false)
+    var that=this
+    setTimeout(function (){
+      that.refreshbyindex(that.switchListByIndex(), false)
+    },100)
   },
   scroll: function () {
   },
