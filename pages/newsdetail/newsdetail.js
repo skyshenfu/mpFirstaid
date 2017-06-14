@@ -17,7 +17,6 @@ Page({
     // var x = dom.getElementsByClassName("text-content")[0]
   //  article = article.replace(/<script.*?>[\s\S]*?<\/script>/ig, "")
     article = article.match(/<div class=\"text\">[\s\S]*?<div class="copyright-tip">/ig)[0]
-    console.log("--------------------------------")
     WxParse.wxParse('article', 'html', article, this, 5)
   }
   ,

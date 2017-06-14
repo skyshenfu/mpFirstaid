@@ -18,21 +18,21 @@ page,
   flex-direction: row;
   margin-top: 2rpx;
   width: 750rpx;
-  height: 230rpx;
+  height: 194rpx;
   justify-content: flex-start;
-  border-bottom:2rpx solid #999999;
+  border-bottom:1rpx solid #d8d8d8;
 }
 .newstype-item-right{
   margin-top:17rpx; 
   display: flex;
   flex-direction: column;
   margin-left:30rpx; 
-  width: 392rpx;
-  height: 196rpx;
+  width: 460rpx;
+  height: 160rpx;
   justify-content: space-between;
 }
 .newstype-item-maintext{
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 .newstype-item-botoom{
   background: #ffffff;

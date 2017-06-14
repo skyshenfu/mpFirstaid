@@ -20,8 +20,10 @@
 }
 .aidtypetext{
  color: #000000;
- margin-top: 10rpx;
- font-size: 20rpx
+ height: 50rpx;
+ text-align: center;
+ margin-top: 15rpx;
+ font-size: 24rpx
 }
 .aidtypeimg{
   display: flex;

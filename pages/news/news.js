@@ -49,7 +49,6 @@ Page({
             "bottomInVisiable": true,
             "locked":false
           })
-          console.log("没有更多")
         }, 2000) 
         return
       }else{
@@ -131,7 +130,6 @@ Page({
     this.refreshbyindex(this.switchListByIndex(),false)
   },
   scroll: function () {
-    console.log("滑动了...")
   },
   onReachBottom: function () {
     this.refreshbyindex(this.switchListByIndex(),true)

@@ -12,8 +12,6 @@ Page({
            that.setData({ aidtypes: res.data.data.dataList}) 
         },
         fail:function(res){
-          console.log(res)
-          console.log('------------------')
         }
       },
       )
@@ -21,7 +19,7 @@ Page({
     itemclick:function(event){
       console.log(event.currentTarget)
       wx.navigateTo({
-        url: '/pages/aiddetail/aiddetail?aidurl=' + event.currentTarget.dataset.aidurl
+        url: '/pages/aiddetail/aiddetail?aidurl=' + event.currentTarget.dataset.aidurl + '&aidname='+event.currentTarget.dataset.aidname
       })
     }
 });

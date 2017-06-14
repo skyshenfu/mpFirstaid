@@ -55,7 +55,8 @@
 .aidsteptext{
   display: flex;
   width: 540rpx; 
-  flex-direction: column
+  flex-direction: column;
+  align-items: flex-start;
 }
 .aidqasmall{
   display: flex;
@@ -66,7 +67,7 @@
 .aidqatext{
     display: flex;
     margin-left:20rpx;
-    width: 640rpx
+    width: 570rpx
 }
 .aidqa{
   display: flex;
@@ -125,6 +126,9 @@
 }
 .kind-list__item-bd_show {
   height: auto;
+}
+.buttonstyle{
+  margin-top:10rpx;
 }
 
 
